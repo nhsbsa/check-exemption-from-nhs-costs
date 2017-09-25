@@ -1,0 +1,64 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Prepay for NHS prescriptions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="text">
+      
+        <div class="heading-group">
+          <p>View an exemption from paying NHS costs</p>
+          <h1 class="heading-xlarge">We couldn't match you to our records</h1>
+        </div>
+
+         <!-- <h2 class="heading-medium">You get free:</h2> -->
+<table id="review-table-one">
+
+
+            <div class="panel panel-border-wide">
+                <p>Check the details you gave are correct.<br>If you have recently moved or changed your name, we may hold your old information. Try again by changing your details or by providing an NHS number if you haven't already.</p>
+            </div>
+            <BR>
+      <tr>
+        <td>Full name</td>
+        <td class="bold">{{firstname}}Robert Green</td>
+        <td><a href="">Change</a></td>
+      </tr>
+      <tr>
+        <td>Date of birth</td>
+        <td class="bold">{{dobday}} {{dobmonth}} {{dobyear}} 02 April 1984</td>
+        <td><a href="">Change</a></td>
+      </tr>
+      <tr>
+        <td>Postcode</td>
+        <td class="bold">AB12 3CD</td>
+        <td><a href="">Change</a></td>
+      </tr>
+            <tr>
+        <td>NHS number</td>
+        <td class="bold">Not known</td>
+        <td><a href="">Change</a></td>
+      </tr>
+    </table>
+<br>
+<h2 class="heading-medium">Further help paying for NHS costs</h2>
+    <p>Check if you could be entitled to <a href="">help paying your NHS costs</a> </p>
+
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</main>
+
+{% endblock %}

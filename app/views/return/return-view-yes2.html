@@ -1,0 +1,65 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Prepay for NHS prescriptions
+{% endblock %}
+
+{% block content %}
+
+<style>
+.example {
+  position: relative;
+  overflow: hidden;
+background-color: #F8F8F8;
+margin-right: 2%;
+border: 10px solid #dee0e2;
+  margin-bottom: 0.78947em;
+  margin-top: 15px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px; }
+
+</style>
+
+  <main id="content" role="main">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge"><span class="heading-secondary">Check if you have to pay for prescriptions</span>You currently have an exemption</h1>
+
+
+    <div class="example">
+          <h2 class="bold-large">Today, you're entitled to free:</h2>
+  
+          <table class="">
+            <tr>
+              <td style="border-bottom: none"><span class="bold">Prescriptons</span> until <span class="bold">03 July 2017</span</td>
+             <!--  <td style="border-bottom: none">It ends <span class="bold">03 July 2017</span></td> -->
+            </tr>
+          </table>
+    </div>
+    <h2 class="heading-medium">How to get your help</h2>
+    <p>In most cases, you don't have to do anything more, although you may have to show proof you do not have to pay of prescriptions to your pharmacist.</p>
+<br>
+        <ul class="options-list">
+          <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+          <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Download this (PDF 55k)</a></li>
+        </ul>
+        
+        <hr>
+        <h2 class="heading-medium">Could you get other help?</h2>
+        
+        <p>
+          There are several ways to get help with paying NHS costs.</p>
+          <p>You can <a href="">check what other help may be available</a> by answering a few more questions about your circumstances. 
+        </p>
+
+        <a href="return_date" class="link-back">Search again</a>
+            </div>
+                    </div>
+
+  </main>
+
+
+{% endblock %}

@@ -6,6 +6,24 @@
 
 {% block content %}
 
+<style>
+.callout {
+    padding: 32px;
+}
+.callout--info {
+ background-color:#f0f4f5;
+ border:solid #768692;
+ border-width:0 0 0 4px
+}
+.callout--attention {
+ border:8px solid #0072ce
+}
+</style>
+
+<!--     <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-7be0fa8ecf0b2d9e5386ddc6dc52e15863f60f108e6ecd8b687582dd7ef87fd8.css">
+    <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government-frontend/application-136d1402a3ff580fbe4df2ba095ea2d0daa33ed65e60f37299a441d73baa3aab.css"> -->
+
+
 <main id="content" role="main">
     
   <div class="grid-row">
@@ -14,41 +32,79 @@
       <div class="text">
       
         <div class="heading-group">
-          <p>View an exemption from paying NHS costs</p>
+          <p>Check if you have to pay for prescriptions</p>
           <h1 class="heading-xlarge">You currently have an exemption</h1>
         </div>
+<!-- 
+        <section class="callout callout--attention">
 
-         <h2 class="heading-medium">You get free:</h2>
+<h2 class="heading-medium">Today, you're entitled to free:</h2>
 
 
-          <table class="data-table assets-summary">
+          <table class="">
             <tr>
               <td>Prescriptons</td>
               <td>Until <span class="bold">03 July 2017</span></td>
-            </tr>
-                        <tr>
-              <td>Dental check-ups and treatment</td>
-              <td>Until <span class="bold">03 July 2017</span></td>
-            </tr>
-                        
+            </tr>   
           </table>
-          <br><br>
-<!-- <h2 class="heading-medium">Keep a copy</h2> -->
+  </section> -->
+
+         <h2 class="heading-medium">Today, you're entitled to free:</h2>
+
+
+          <table class="">
+            <tr>
+              <td>Prescriptons</td>
+              <td>Until <span class="bold">03 July 2017</span></td>
+            </tr>   
+          </table>
+
+      <h2 class="heading-medium">How to get your help</h2>
+    <p>In most cases, you don't have to do anything more, although you may have to show proof you do not have to pay of prescriptions to your pharmacist.</p>
+<br>
         <ul class="options-list">
           <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
           <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Download this (PDF 55k)</a></li>
         </ul>
         
-        <!-- <hr>
-        <h2 class="heading-medium">Find out if you could get further help</h2>
+        <hr>
+        <h2 class="heading-medium">Could you get further help?</h2>
         
         <p>
-          There are several ways to get 
+          There are several ways to get help with paying NHS costs.</p>
+          <p>You can <a href="">check what other help may be available</a> by answering a few more questions about your circumstances. 
         </p>
+
+</div>
+
         
-        <p>
-          <a href="">Check for help paying other NHS costs </a>
-        </p> -->
+<!-- <nav class="govuk-previous-and-next-navigation" role="navigation" aria-label="Pagination">
+  <ul class="group">
+      <li class="previous-page">
+        <a href="2-what-you-get" rel="prev">
+          <span class="pagination-part-title">
+            <svg class="pagination-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            Start again
+          </span>
+            <span class="pagination-label">What you'll get</span>
+        </a>
+      </li>
+      <li class="next-page">
+        <a href="4-apply" rel="next">
+          <span class="pagination-part-title">
+            Other help
+            <svg class="pagination-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </span>
+            <span class="pagination-label">Check if you can get more help</span>
+        </a>
+      </li>
+  </ul>
+</nav> -->
+       <a href="javascript:history.go(-1)" class="link-back">Back to start</a>
         
       </div>
       

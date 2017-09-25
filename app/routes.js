@@ -58,16 +58,16 @@ router.get(/return_postcode/, function (req, res) {
 });
 
 //nhs number
-router.get(/eturn-handler/, function (req, res) {
-  res.render('return/return_nhsnumber');
+router.get(/return-handler/, function (req, res) {
+  res.render('return/return-view-yes2');
 });
 
-//return-view
-router.get(/nhsnumber-handler/, function (req, res) {
-  res.render('return/return-view-yes', {
-    name : applicant.firstName + ' ' + applicant.lastName
-  });
-});
+// //return-view
+// router.get(/nhsnumber-handler/, function (req, res) {
+//   res.render('return/return-view-yes', {
+//     name : applicant.firstName + ' ' + applicant.lastName
+//   });
+// });
 
 module.exports = router;
 
