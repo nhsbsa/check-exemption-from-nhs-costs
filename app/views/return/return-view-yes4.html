@@ -1,0 +1,94 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Prepay for NHS prescriptions
+{% endblock %}
+
+{% block content %}
+
+<style>
+.example {
+  position: relative;
+  overflow: hidden;
+background-color: #F8F8F8;
+margin-right: 2%;
+border: 10px solid #dee0e2;
+  margin-bottom: 0.78947em;
+  margin-top: 15px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px; }
+  .info-table {
+  span {
+    float: right;
+    width: 60%;
+  }
+}
+
+.done-panel h1 {
+    padding-top: 0;
+    margin: 0;}
+
+    .done-panel h2 {
+    line-height: 145%;
+
+    padding-top: 0;
+    margin: 10px 0 5px 0;
+}
+
+</style>
+
+  <main id="content" role="main">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+
+      <div class="done-panel">
+
+        <h1 class="heading-large"><span id="done-tick"> </span>You currently have an exemption</h1>
+    <!--     <h2 class="heading-large">You currently have an exemption</h2> -->
+
+      </div>
+   <!--    
+        <h1 class="heading-xlarge"><span class="heading-secondary">Check if you have to pay for prescriptions</span>You currently have an exemption</h1>
+ -->
+
+    <div class="example">
+          <h2 class="bold-medium">Today, you're entitled to free:</h2>
+          <br>
+  <div class="info-table">
+  <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
+        <p>Name: <span class="strong">Jane Doe</span></p>
+        <p>Date of birth: <span class="strong">04 September 1980</span></p>
+        <p>Ends on: <span class="strong">The expiry date is more than a month away</span></p>
+        <br>
+        <p>Todays date: <span class="strong">26 September 2017</span></p>
+      </div>
+
+    </div>
+    <h2 class="heading-medium">Collecting prescriptions</h2>
+    <p>You can use this as proof as you do not have to pay for prescriptions. <br>The pharmacist will not charge you.</p>
+
+<br>
+        <ul class="options-list">
+          <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+          <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55k)</a></li>
+        </ul>
+        
+        <hr>
+        <h2 class="heading-medium">Help to pay other NHS costs</h2>
+        
+          <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
+        </p>
+
+
+        <a href="return_date" class="link-back">Check again</a>
+            </div>
+                    </div>
+
+  </main>
+
+
+{% endblock %}
