@@ -33,41 +33,58 @@ applicant.address = null;
 var thisYear = 2017;
 
 
-//** RETURN **//
+//** RETURN YES**//
 
-//dob
-router.get(/return_date/, function (req, res) {
-  res.render('return/return_date');
-});
-
-//name
-router.get(/return_name/, function (req, res) {
-  res.render('return/return_name');
-});
-
-router.get(/name-handler/, function (req, res) {
-  applicant.firstName = req.query.firstname;
-  applicant.lastName = req.query.lastname;
-  applicant.setFullName();
-  res.redirect('return_postcode');
-});
-
-//postcode
-router.get(/return_postcode/, function (req, res) {
-  res.render('return/return_postcode');
-});
-
-//nhs number
-router.get(/return-handler/, function (req, res) {
-  res.render('return/return-view-yes3');
-});
-
-// //return-view
-// router.get(/nhsnumber-handler/, function (req, res) {
-//   res.render('return/return-view-yes', {
-//     name : applicant.firstName + ' ' + applicant.lastName
-//   });
+// //dob
+// router.get(/return_date/, function (req, res) {
+//   res.render('return/return_date');
 // });
+
+// //name
+// router.get(/return_name/, function (req, res) {
+//   res.render('return/return_name');
+// });
+
+// router.get(/name-handler/, function (req, res) {
+//   applicant.firstName = req.query.firstname;
+//   applicant.lastName = req.query.lastname;
+//   applicant.setFullName();
+//   res.redirect('return_postcode');
+// });
+
+// //postcode
+// router.get(/return_postcode/, function (req, res) {
+//   res.render('return/return_postcode');
+// });
+
+// //nhs number
+// router.get(/return-handler/, function (req, res) {
+//   res.render('return/return-view-yes3');
+// });
+
+// //** RETURN NO **//
+
+// //dob
+// router.get(/date/, function (req, res) {
+//   res.render('return-no/return_date');
+// });
+
+// //name
+// router.get(/name/, function (req, res) {
+//   res.render('return-no/return_name');
+// });
+
+
+// //postcode
+// router.get(/postcode/, function (req, res) {
+//   res.render('return-no/return_postcode');
+// });
+
+// //nhs number
+// router.get(/result/, function (req, res) {
+//   res.render('return/return-view-no-match3');
+// });
+
 
 module.exports = router;
 
