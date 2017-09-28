@@ -59,7 +59,7 @@ router.get(/return_postcode/, function (req, res) {
 
 //nhs number
 router.get(/return-handler/, function (req, res) {
-  res.render('return/return-view-yes2');
+  res.render('return/return-view-yes3');
 });
 
 // //return-view
