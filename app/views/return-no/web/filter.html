@@ -1,0 +1,470 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Prepay for NHS prescriptions
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+main.search #results .filter-form {
+    float: left;
+    width: 33.33333%;
+}
+.js-enabled .checkbox-filter .head {
+    cursor: pointer;
+}
+.checkbox-filter .head {
+    padding: 5px;
+    position: relative;
+}
+.filter-form .filter {
+    margin-bottom: 10px;
+    background-color: #dee0e2;
+    padding: 5px;
+}
+.filter-form .filter .legend {
+    font-size: 19px;
+    line-height: 1.31579;
+}
+.js-enabled .checkbox-filter .head .controls {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline;
+}
+
+.js-enabled .checkbox-filter .head .controls .clear-selected.js-hidden {
+    left: -9999em;
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+}
+.js-enabled .checkbox-filter .toggle {
+    background: url(https://assets.publishing.service.gov.uk/frontend/toggle-sprite-0c055f9b806a9a2af3eeca6bfaaebc6dc74daacf0d806d7161338f4bb3ac0ec7.png) no-repeat;
+
+    height: 10px;
+    width: 12px;
+    background-position: -12px 0;
+    display: inline-block;
+}
+.checkbox-filter .checkbox-container {
+    position: relative;
+    padding: 5px;
+    background-color: #fff;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.checkbox-filter .checkbox-container li label {
+    display: inline-block;
+    margin-left: 20px;
+}
+.checkbox-filter .checkbox-container li input {
+    width: 12px;
+    border: none;
+    margin: 3px 10px 0 0;
+    vertical-align: top;
+    position: absolute;
+}
+</style>
+
+<main id="content" role="main" class="group search">
+
+<div id="results" class="js-live-search-results-block">
+      <div aria-live="assertive" class="js-aria-live-count visuallyhidden">
+    7,306 results found
+</div>
+        <div class="filter-form">
+    <div class="inner-block">
+      <p class="info">Filter by:</p>
+
+        <div class="filter checkbox-filter js-openable-filter " tabindex="0">
+          <div class="head">
+            <span class="legend">Organisations</span>
+            <div class="controls">
+              <a class="clear-selected  js-hidden">Remove filters</a>
+              <div class="toggle"></div>
+            </div>
+          </div>
+          <div class="checkbox-container" id="organisations-filter">
+            <ul>
+                <li>
+                  <input name="filter_organisations[]" value="department-for-international-development" id="department-for-international-development" checked="" type="checkbox">
+                  <label for="department-for-international-development">Department for International Development (960)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="ministry-of-defence" id="ministry-of-defence" checked="" type="checkbox">
+                  <label for="ministry-of-defence">Ministry of Defence (620)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="employment-tribunal" id="employment-tribunal" checked="" type="checkbox">
+                  <label for="employment-tribunal">Employment Tribunal (443)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="home-office" id="home-office" checked="" type="checkbox">
+                  <label for="home-office">Home Office (430)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="hm-revenue-customs" id="hm-revenue-customs" type="checkbox">
+                  <label for="hm-revenue-customs">HM Revenue &amp; Customs (2,596)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="ministry-of-justice" id="ministry-of-justice" type="checkbox">
+                  <label for="ministry-of-justice">Ministry of Justice (954)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="hm-courts-and-tribunals-service" id="hm-courts-and-tribunals-service" type="checkbox">
+                  <label for="hm-courts-and-tribunals-service">HM Courts &amp; Tribunals Service (938)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="foreign-commonwealth-office" id="foreign-commonwealth-office" type="checkbox">
+                  <label for="foreign-commonwealth-office">Foreign &amp; Commonwealth Office (641)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="intellectual-property-office" id="intellectual-property-office" type="checkbox">
+                  <label for="intellectual-property-office">Intellectual Property Office (262)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="charity-commission" id="charity-commission" type="checkbox">
+                  <label for="charity-commission">The Charity Commission (226)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="department-for-education" id="department-for-education" type="checkbox">
+                  <label for="department-for-education">Department for Education (193)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="department-for-business-innovation-skills" id="department-for-business-innovation-skills" type="checkbox">
+                  <label for="department-for-business-innovation-skills">Closed organisation: Department for Business, Innovation &amp; Skills (188)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="employment-appeal-tribunal" id="employment-appeal-tribunal" type="checkbox">
+                  <label for="employment-appeal-tribunal">Employment Appeal Tribunal (166)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="cabinet-office" id="cabinet-office" type="checkbox">
+                  <label for="cabinet-office">Cabinet Office (165)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="land-registry" id="land-registry" type="checkbox">
+                  <label for="land-registry">HM Land Registry (158)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="valuation-office-agency" id="valuation-office-agency" type="checkbox">
+                  <label for="valuation-office-agency">Valuation Office Agency (149)</label>
+                </li>
+                <li>
+                  <input name="filter_organisations[]" value="upper-tribunal-administrative-appeals-chamber" id="upper-tribunal-administrative-appeals-chamber" type="checkbox">
+                  <label for="upper-tribunal-administrative-appeals-chamber">Upper Tribunal (Administrative Appeals Chamber) (140)</label>
+                </li>
+            </ul>
+          </div>
+        </div>
+
+      <div class="submit js-live-search-fallback">
+        <input class="button" value="Submit filters" type="submit">
+      </div>
+    </div>
+  </div>
+
+<div class="results-block">
+  <div class="inner-block js-live-search-results-list"><div class="result-count " id="js-live-search-result-count" aria-hidden="true">
+    7,306 results found
+</div>
+
+  <ol class="results-list" id="js-live-search-results" start="1" data-search-query="search regs" data-analytics-ecommerce="" data-ecommerce-start-index="1">
+        <li>
+          <h3><a href="/jobsearch" data-ecommerce-row="" data-ecommerce-path="/jobsearch" data-ecommerce-content-id="a01fcb59-5dc8-4bf5-b06d-dd567a6d2f5f">Find a job with Universal Jobmatch</a></h3>
+        
+        
+        
+        
+        
+          <p>Find a job using the Universal Jobmatch service - jobseekers can match their CV and skills to jobs posted by companies</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-property-information-land-registry" data-ecommerce-row="" data-ecommerce-path="/search-property-information-land-registry" data-ecommerce-content-id="321333cd-da30-4c5a-92ef-a9d1abe733c6"><mark>Search</mark> for property information from HM Land Registry</a></h3>
+        
+        
+        
+        
+        
+          <p>Find a property and get its title plan, title register, who owns it and see if it's at risk of flooding</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/apply-apprenticeship" data-ecommerce-row="" data-ecommerce-path="/apply-apprenticeship" data-ecommerce-content-id="45ad868a-2e79-4029-991b-c29559d7eb29">Find an apprenticeship</a></h3>
+        
+        
+        
+        
+        
+          <p>Register your profile, <mark>search</mark> vacancies and apply for an apprenticeship - you must be 16 or over</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-for-trademark" data-ecommerce-row="" data-ecommerce-path="/search-for-trademark" data-ecommerce-content-id="badb98d7-1c71-4125-83c2-ec0c6c19fcf6"><mark>Search</mark> for a trade mark</a></h3>
+        
+        
+        
+        
+        
+          <p>Look up a trade mark to see if something identical or similar to your brand is already registered
+</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/government/organisations/companies-house" data-ecommerce-row="" data-ecommerce-path="/government/organisations/companies-house" data-ecommerce-content-id="c36bd301-d0c5-4492-86ad-ee7843b8383b">Companies House </a></h3>
+        
+        
+        
+            <ul class="attributes">
+                <li> <abbr title="Companies House ">Companies House</abbr> </li>
+    </ul>
+
+        
+          <p>The home of Companies House  on GOV.UK. We incorporate and dissolve limited companies. We register company information and make it available to the public.</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-house-prices" data-ecommerce-row="" data-ecommerce-path="/search-house-prices" data-ecommerce-content-id="1aa96e6c-6dbf-4960-9049-2fdf6dbb9bc7"><mark>Search</mark> sold property prices</a></h3>
+        
+        
+        
+        
+        
+          <p>Find out how much a property sold for in England or Wales</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/trade-tariff" data-ecommerce-row="" data-ecommerce-path="/trade-tariff" data-ecommerce-content-id="1118c97c-7d52-40f7-b283-6c5090ec6721"> Trade Tariff: look up commodity codes, duty and VAT rates</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> for import and export commodity codes and for tax, duty and licences that apply to your goods</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/building-regulations-approval" data-ecommerce-row="" data-ecommerce-path="/building-regulations-approval" data-ecommerce-content-id="a46f7f68-0ee3-4a6d-ac59-4eec59170a60">Building regulations approval</a></h3>
+        
+        
+        
+        
+        
+          <p>When you need building <mark>regs</mark> approval, how to apply, using a competent person scheme, and determinations and appeals</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-will-probate" data-ecommerce-row="" data-ecommerce-path="/search-will-probate" data-ecommerce-content-id="9a4dd98e-6543-476b-b5ae-c97399905028">Find a will or probate document (England and Wales)</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> online for a will, grant of representation or probate document for a death in or after 1858</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/council-tax-bands" data-ecommerce-row="" data-ecommerce-path="/council-tax-bands" data-ecommerce-content-id="515c819e-34bd-421d-8261-eaa06c4786c5">Check your Council Tax band</a></h3>
+        
+        
+        
+        
+        
+          <p>Find out the Council Tax band for a property in England, Scotland or Wales by looking up the property's postcode online</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/find-charity-information" data-ecommerce-row="" data-ecommerce-path="/find-charity-information" data-ecommerce-content-id="30abeb6a-a5e9-4203-9e4c-b6bce7781d71"><mark>Search</mark> the charity register</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> the charity register to find details of registered charities in England and Wales including contact information, activities, latest financial reports and current trustees. </p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-bankruptcy-insolvency-register" data-ecommerce-row="" data-ecommerce-path="/search-bankruptcy-insolvency-register" data-ecommerce-content-id="e7ddddd5-58b1-4f6c-b711-1d4c290239a0"><mark>Search</mark> the bankruptcy and insolvency register</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> the Individual Insolvency Register for details about bankruptcy orders, Debt Relief Orders, Individual Voluntary Arrangements, and restrictions orders and undertakings</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/buy-a-personalised-registration-number" data-ecommerce-row="" data-ecommerce-path="/buy-a-personalised-registration-number" data-ecommerce-content-id="e125ea81-83a4-43f2-a0df-d511557c82f8">Buy a personalised registration number</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> for a personalised number plate registration and buy it from DVLA online or at auction</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-for-patent" data-ecommerce-row="" data-ecommerce-path="/search-for-patent" data-ecommerce-content-id="0b1014ce-b0ad-46c1-9753-ec9a8f21cb87"><mark>Search</mark> for a patent</a></h3>
+        
+        
+        
+        
+        
+          <p>Find registered patents, patent applications and pending patents</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/appeal-planning-inspectorate" data-ecommerce-row="" data-ecommerce-path="/appeal-planning-inspectorate" data-ecommerce-content-id="f693f366-b0c2-4d2b-b08e-b9ab91611c03">Appeal or <mark>search</mark> for a planning decision or notice</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> for an appeal against a planning decision or notice from your local planning authority, or start a new appeal</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/government/publications/searches-of-the-index-of-proprietors-names" data-ecommerce-row="" data-ecommerce-path="/government/publications/searches-of-the-index-of-proprietors-names" data-ecommerce-content-id="5f50d72a-7631-11e4-a3cb-005056011aef"><mark>Searches</mark> of the index of proprietors’ names (PG74)</a></h3>
+        
+        
+        
+            <ul class="attributes">
+                <li> 24 June 2015 </li>
+        <li> Guidance </li>
+        <li> HM Land Registry </li>
+    </ul>
+
+        
+          <p>Find out who can <mark>search</mark> against the name of an owner of land or registered mortgages and how to do it (practice guide 74).</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/find-ofsted-inspection-report" data-ecommerce-row="" data-ecommerce-path="/find-ofsted-inspection-report" data-ecommerce-content-id="a02fa764-c088-4e3c-958b-1627782e0610">Find an Ofsted inspection report</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> for Ofsted inspection reports for childminders and childcare providers, schools, colleges, further education providers, children and families services</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-local-archives" data-ecommerce-row="" data-ecommerce-path="/search-local-archives" data-ecommerce-content-id="b02557ce-b931-4c1c-aa5f-ace642f45759"><mark>Search</mark> local archives</a></h3>
+        
+        
+        
+        
+        
+          <p>Explore the local archives to help your research into family and local history at your local council</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/government/publications/searches" data-ecommerce-row="" data-ecommerce-path="/government/publications/searches" data-ecommerce-content-id="5d81ac57-7631-11e4-a3cb-005056011aef"><mark>Searches</mark></a></h3>
+        
+        
+        
+            <ul class="attributes">
+                <li>  7 February 2012 </li>
+        <li> Guidance </li>
+        <li> HM Passport Office </li>
+    </ul>
+
+        
+          <p>Procedure for requesting historic passport files in exceptional cases.</p>
+        
+        
+        
+        
+        </li>
+        <li>
+          <h3><a href="/search-trade-mark-decisions" data-ecommerce-row="" data-ecommerce-path="/search-trade-mark-decisions" data-ecommerce-content-id="425f29d1-47e5-4831-a8a7-93068d0effbc"><mark>Search</mark> trade mark decisions</a></h3>
+        
+        
+        
+        
+        
+          <p><mark>Search</mark> decisions from UK trade mark hearings</p>
+        
+        
+        
+        
+        </li>
+  </ol>
+
+  <ul class="previous-next-navigation">
+
+      <li class="next">
+        <a href="/search?q=search+regs&amp;start=20">
+          Next <span class="visuallyhidden">page</span>
+          <span class="page-numbers">2 of 366</span>
+        </a>
+      </li>
+  </ul>
+</div>
+</div>
+
+    </div>
+    </main>
+
+
+  {% endblock %}
