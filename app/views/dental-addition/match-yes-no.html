@@ -125,7 +125,6 @@ Prepay for NHS prescriptions
             background-size: 29px 24px
         }
     }
-
 </style>
 
 <main id="content" role="main">
@@ -140,7 +139,7 @@ Prepay for NHS prescriptions
 
 
 
-<!--<h2 class="heading-medium">This can be shown as proof today</h2>-->
+            <!--<h2 class="heading-medium">This can be shown as proof today</h2>-->
             <table>
                 <tbody>
 
@@ -153,11 +152,15 @@ Prepay for NHS prescriptions
                         <td>04 September 1980</td>
                     </tr>
                     <tr>
-                        <td><span class="strong">Exempt from paying</td>
+                        <td><span class="strong">Exempt from paying</span></td>
                         <td><span class="form-hint-list-item form-hint-list-item--valid">
                                 <span class="form-hint-list-item__indicator"></span>
                                 NHS prescriptions
-                            </span><span class="form-hint-list-item form-hint-list-item--valid">
+                            </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="strong">Not exempt from paying</span></td>
+                        <td><span class="form-hint-list-item form-hint-list-item--false">
                                 <span class="form-hint-list-item__indicator"></span>
                                 NHS dental check ups and treatment
                             </span></td>
@@ -169,7 +172,7 @@ Prepay for NHS prescriptions
                     <tr>
                         <td><span class="strong">Today's date</span></td>
                         <td>17 October 2017</td>
-<!--
+                        <!--
                    <i class="icon icon-important">
                 <span class="visually-hidden">Warning</span>
             </i>
@@ -182,38 +185,42 @@ Prepay for NHS prescriptions
             </table>
 
             <h3 class="heading-medium">How to get your help</h3>
-            <p>Don't worry if you've lost your exemption card or certificate, you can show this page as proof today.</p>        <p>
-        <span class="bold">We do not send out plastic cards any more.</span> They are not required for collecting prescriptions. They are costly to the NHS and the environment.
-      </p>
-            <br>
-        <ul class="options-list">
-          <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
-          <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55k)</a></li>
-                  <li>            <div class="app-c-subscribe">
-                <a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" class="app-c-subscribe__link govuk-link" href="/bank-holidays/england-and-wales.ics">Add your NHS exemption end date to your calendar <nobr>(ICS, 14KB)</nobr></a>
-            </div></li>
-        </ul>
-
-
+            <p>Don't worry if you've lost your exemption card or certificate, you can show this page as proof today.</p>
 <!--
-        <h2 class="heading-medium">Help to pay other NHS costs</h2>
+               <span class="bold">We do not send out plastic cards any more.</span> They are not required for collecting prescriptions. They are costly to the NHS and the environment.
+      </p>
+-->
+
+            <br>
+            <ul class="options-list">
+                <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+                <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55k)</a></li>
+                <li>
+                    <div class="app-c-subscribe">
+                        <a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" class="app-c-subscribe__link govuk-link" href="/bank-holidays/england-and-wales.ics">Add your NHS exemption end date to your calendar <nobr>(ICS, 14KB)</nobr></a>
+                    </div>
+                </li>
+            </ul>
+
+            
+        <h2 class="heading-medium" style="margin-top:0px">Could you get help to pay other NHS costs?</h2>
         
           <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
         </p>
--->
 
 
 
 
 
+<br>
 
             <p class="button-group">
                 <a class="button" href="/">
                     Finished
                 </a>
-            </p><br>    
-<!--           <a href="return_date" class="link-back">Check again</a>-->
-    </div>
+            </p><br>
+            <!--           <a href="return_date" class="link-back">Check again</a>-->
+        </div>
 
 </main>
 
@@ -232,6 +239,6 @@ Prepay for NHS prescriptions
     </div>
         </div>
 -->
-    
+
 
 {% endblock %}

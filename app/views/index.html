@@ -1,171 +1,185 @@
 {% extends "layout_bsa.html" %}
 
 {% block page_title %}
-  Help paying for NHS Costs prototype
+Help paying for NHS Costs prototype
 {% endblock %}
 
 {% block content %}
 
 
 <style>
-<style>
-.right{
-      text-align: right;
-}
+    <style>.right {
+        text-align: right;
+    }
 
-.app-c-contents-list__list-item--numbered .app-c-contents-list__link {
- display:table
-}
-.app-c-contents-list__number,.app-c-contents-list__numbered-text {
- display:table-cell
-}
-.app-c-contents-list__number {
- min-width:1.5em
-}
-.app-c-contents-list__numbered-text {
- padding-left:0.3em
-}
-.direction-rtl .app-c-contents-list__numbered-text {
- padding-left:0;
- padding-right:0.3em
-}
-.app-c-contents-list {
- position:relative;
- margin-bottom:20px;
- z-index:1;
- background:#fff;
- box-shadow:0 20px 15px -10px #fff
-}
-.app-c-contents-list__link {
- text-decoration:none
-}
-.app-c-contents-list__link:hover,.app-c-contents-list__link:focus,.app-c-contents-list__link:active {
- text-decoration:underline
-}
-.app-c-contents-list__list-item--parent>.app-c-contents-list__link {
- font-weight:bold
-}
-.app-c-contents-list__list-item {
- padding-top:7.5px;
- line-height:1.3;
- list-style-type:none;
-}
-.app-c-contents-list__list-item--dashed {
- margin-left:20px;
- padding-right:20px
-}
-.app-c-contents-list__list-item--dashed:before {
- content:"— ";
- margin-left:-20px
-}
-.column-third h2{
-    color:#005EB8;
-}
+    .app-c-contents-list__list-item--numbered .app-c-contents-list__link {
+        display: table
+    }
+
+    .app-c-contents-list__number,
+    .app-c-contents-list__numbered-text {
+        display: table-cell
+    }
+
+    .app-c-contents-list__number {
+        min-width: 1.5em
+    }
+
+    .app-c-contents-list__numbered-text {
+        padding-left: 0.3em
+    }
+
+    .direction-rtl .app-c-contents-list__numbered-text {
+        padding-left: 0;
+        padding-right: 0.3em
+    }
+
+    .app-c-contents-list {
+        position: relative;
+        margin-bottom: 20px;
+        z-index: 1;
+        background: #fff;
+        box-shadow: 0 20px 15px -10px #fff
+    }
+
+    .app-c-contents-list__link {
+        text-decoration: none
+    }
+
+    .app-c-contents-list__link:hover,
+    .app-c-contents-list__link:focus,
+    .app-c-contents-list__link:active {
+        text-decoration: underline
+    }
+
+    .app-c-contents-list__list-item--parent>.app-c-contents-list__link {
+        font-weight: bold
+    }
+
+    .app-c-contents-list__list-item {
+        padding-top: 7.5px;
+        line-height: 1.3;
+        list-style-type: none;
+    }
+
+    .app-c-contents-list__list-item--dashed {
+        margin-left: 20px;
+        padding-right: 20px
+    }
+
+    .app-c-contents-list__list-item--dashed:before {
+        content: "— ";
+        margin-left: -20px
+    }
+
+    .column-third h2 {
+        color: #005EB8;
+    }
 </style>
 
 
 <main id="content" role="main">
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
-        <h1 class="heading-xlarge">
-          <span class="heading-secondary">Prototype</span>
-          View your exemption from paying NHS costs
-        </h1>
-        
-                <h2 class="heading-medium">Dental Addition</h2>
-                
-                <ul class="list-bullet">
-                    <li><a href="/dental-addition/start">Start page</a></li>
-                    <li><a href="/dental-addition/nhsnumber">NHS Number</a></li>
-                    <li><a href="/dental-addition/name">Name</a></li>
-                    <li><a href="/dental-addition/dob">DOB</a></li>
-                    <li><a href="/dental-addition/postcode">Postcode</a></li>
-                </ul>
-                
-                <h2 class="heading-small">End Pages</h2>
-                <ul class="list-bullet">
-                    <li><a href="/dental-addition/start">Start page</a></li>
-                    <li><a href="/dental-addition/nhsnumber">NHS Number</a></li>
-                    <li><a href="/dental-addition/name">Name</a></li>
-                    <li><a href="/dental-addition/dob">DOB</a></li>
-                    <li><a href="/dental-addition/postcode">Postcode</a></li>
-                </ul>
-                <hr>
-                
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Prototype</span>
+                View your exemption from paying NHS costs
+            </h1>
 
-        <ul>
-          <li><a href="/return/return_start">Journey iteration 1- yes result</a></li>
-          <li><a href="/return-no/return_start">Journey iteration 1- no result</a></li>
-        </ul>
+            <h2 class="heading-medium">Dental Addition</h2>
 
-        <hr>
+            <ul class="list-bullet">
+                <li><a href="/dental-addition/start">Start page</a></li>
+                <li><a href="/dental-addition/nhsnumber">NHS Number</a></li>
+                <li><a href="/dental-addition/name">Name</a></li>
+                <li><a href="/dental-addition/dob">DOB</a></li>
+                <li><a href="/dental-addition/postcode">Postcode</a></li>
+            </ul>
 
-        <h2 class="heading-medium">All pages</h2>
+            <h2 class="heading-small">End Pages- match</h2>
+            <ul class="list-bullet">
+                <li><a href="/dental-addition/match-yes">Match- maternity | Tax credits | HC2</a></li>
+                <li><a href="/dental-addition/match-yes-no">Match- medical only</a></li>
+                <li><a href="/dental-addition/match-ppc">Match- PPC</a></li>
+                <li><a href="/dental-addition/match-ppc">Match- PPC due to expire</a></li>
+                <li><a href="/dental-addition/dob">Match- Expired</a></li>
+            </ul>
+            <h2 class="heading-small">End Pages- no match</h2>
+            <ul class="list-bullet">
+                <li><a href="/dental-addition/match-yes">No match- maternity | Tax credits | HC2</a></li>
+            </ul>
+            
+            <hr>
 
-<ol class="app-c-contents-list__list">
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return_start">Start page</a>
-                        </li>
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return_date">Date of birth</a>
-                        </li>
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return_name">Name</a>
-                        </li>
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return_postcode">Post code</a>
-                        </li>
+            <h2 class="heading-medium">All pages- 1st iteration</h2>
 
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return-view-yes3">Result- exemption found-  with end date</a>
-                            <ol class="app-c-contents-list__nested-list">
-                                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
-                                    <a class="app-c-contents-list__link" href="/return/return-view-yes2">Result- exemption found with end date (option 2)</a>
-                                </li>
-                                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
-                                        <a class="app-c-contents-list__link" href="/return/return-view-yes5">Result- exemption found with end date including free dental</a>
-                                    </li>
-                            </ol>
-                        </li>
+            <ol class="app-c-contents-list__list">
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return_start">Start page</a>
+                </li>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return_date">Date of birth</a>
+                </li>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return_name">Name</a>
+                </li>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return_postcode">Post code</a>
+                </li>
 
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return-view-yes4">Result- exemption found- without end date</a>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return-view-yes3">Result- exemption found- with end date</a>
+                    <ol class="app-c-contents-list__nested-list">
+                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+                            <a class="app-c-contents-list__link" href="/return/return-view-yes2">Result- exemption found with end date (option 2)</a>
                         </li>
+                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+                            <a class="app-c-contents-list__link" href="/return/return-view-yes5">Result- exemption found with end date including free dental</a>
+                        </li>
+                    </ol>
+                </li>
 
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/return-view-no-match2">Result- no match</a>
-                            <ol class="app-c-contents-list__nested-list">
-                                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
-                                    <a class="app-c-contents-list__link" href="/return/return-view-no-match">Result- no match (option 2)</a>
-                                </li>
-                                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
-                                    <a class="app-c-contents-list__link" href="/return-no/return-view-no-match3">Result- no match (option 3)</a>
-                                </li>
-                              <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
-                                    <a class="app-c-contents-list__link" href="/return-no/return-view-no-match4">Result- no match (option 4)</a>
-                                </li>
-                            </ol>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return-view-yes4">Result- exemption found- without end date</a>
+                </li>
+
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/return-view-no-match2">Result- no match</a>
+                    <ol class="app-c-contents-list__nested-list">
+                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+                            <a class="app-c-contents-list__link" href="/return/return-view-no-match">Result- no match (option 2)</a>
                         </li>
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/api-offline">Error page- Service offline</a>
+                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+                            <a class="app-c-contents-list__link" href="/return-no/return-view-no-match3">Result- no match (option 3)</a>
                         </li>
-                       <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/result_60over">60 or over</a>
+                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+                            <a class="app-c-contents-list__link" href="/return-no/return-view-no-match4">Result- no match (option 4)</a>
                         </li>
-                        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
-                            <a class="app-c-contents-list__link" href="/return/result_under16">Under 16's</a>
-                        </li>
-                      
-                            </ol>
-                            
-        
-  </div>
-</div>
+                    </ol>
+                </li>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/api-offline">Error page- Service offline</a>
+                </li>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/result_60over">60 or over</a>
+                </li>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--parent">
+                    <a class="app-c-contents-list__link" href="/return/result_under16">Under 16's</a>
+                </li>
+
+            </ol>
+            <hr>
+            <ul>
+                <li><a href="/return/return_start">Journey iteration 1- yes result</a></li>
+                <li><a href="/return-no/return_start">Journey iteration 1- no result</a></li>
+            </ul>
+
+
+        </div>
+    </div>
 
 </main>
 
 {% endblock %}
-
-
