@@ -7,6 +7,16 @@ View an NHS prescription<br>prepayment
 {% block content %}
 
 <main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            <div class="phase-banner">
+                <p>
+                    <strong class="phase-tag">BETA</strong>
+                    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+                </p>
+            </div>
+        </div>
+    </div>
 
     <div class="grid-row">
         <div class="column-two-thirds">
@@ -35,19 +45,19 @@ View an NHS prescription<br>prepayment
                 <li>HC2 certificate (full help through the Low Income Scheme)</li>
                 <li>Tax Credit exemption certificate </li>
             </ul>
-            
+
             <h3 class="heading-medium">Exemptions you can't currently check</h3>
             <ul class="list-bullet">
                 <li>prescription exemption certificate issued by the Ministry of Defence </li>
                 <li>HC3 certificate (partial help through the Low Income Scheme) </li>
             </ul>
 
-<!--
+            <!--
             <p class="panel panel-border-wide"><b>You cannot use this service to check which benefit you're on.</b>
                 <br>
                 Only some <a href="/">benefits entitle you to free prescriptions</a>
             </p>
--->
+-->            <p>This result can only be used as proof today, you'll need to check this service each time you want to use it as proof.</p> 
 
 
             <h2 class="heading-large">When you don't need to check</h2>
@@ -55,7 +65,9 @@ View an NHS prescription<br>prepayment
             <ul class="list-bullet">
                 <li>under 16</li>
                 <li>16, 17 or 18 and in full time education</li>
-                <li>on <a href="/">certain benefits</a> or named as a dependant</li>
+                <li>getting <a href="https://www.nhsbsa.nhs.uk/check-if-youre-eligible-help/getting-benefits">certain benefits</a> or you're named on the claim as a partner or child.</li>
+                
+                
             </ul>
 
             <br>
@@ -68,9 +80,7 @@ View an NHS prescription<br>prepayment
 
         </div>
 
-
-
-
+    </div>
 </main>
 
 {% endblock %}

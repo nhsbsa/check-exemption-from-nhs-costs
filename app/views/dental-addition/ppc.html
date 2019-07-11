@@ -35,9 +35,8 @@ Prepay for NHS prescriptions
 
     .done-panel h2 {
         line-height: 145%;
-
         padding-top: 0;
-        /*        margin: 10px 0 5px 0;*/
+        margin-top: 0.8em;
     }
 
     .callout--attention {
@@ -125,10 +124,31 @@ Prepay for NHS prescriptions
             background-size: 29px 24px
         }
     }
+    .blue-box {
+
+    position: relative;
+    overflow: hidden;
+    margin-right: 2%;
+    border: 8px solid #005EB8;
+    margin-bottom: 0.78947em;
+    margin-top: 15px;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+        padding: 20px 7px 20px 7px;
+    }
+    .mobile-icon {
+    background-image: url("/public/images/bsa/mobile.svg");
+    padding-left: 37px;
+        margin-left: 3px;}
 </style>
 
 <main id="content" role="main">
-        <div class="grid-row">
+    <div class="grid-row">
         <div class="column-full">
             <div class="phase-banner">
                 <p>
@@ -143,13 +163,25 @@ Prepay for NHS prescriptions
         <div class="column-two-thirds">
 
             <div class="done-panel">
-                <h1 class="heading-xlarge">You currently have an NHS exemption</h1>
-                <h2 class="heading-medium">Expires on 06 November 2019</h2>
+                <span class="heading-large">You have an NHS Prescripton <nobr>Prepayment Certificate</nobr> </span>
+                <h1 class="heading-large">869 467 589</h1>
+                <h2 class="heading-medium" style="">Expires on 23 July 2019</h2>
             </div>
 
+            <!--
+                            <div class="example">
+                    <h2 class="bold-large">Your NHS Prescription Prepayment Certificate</h2>
+                    <br>
+                    <div class="info-table">
+                        <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
+                        <p>Prepayment for: <span class="strong">Jane Doe</span></p>
+                        <p>Prepayment number: <span class="strong">869 467 589</span></p>
+                        <p>Started on: <span class="strong">9 July 2019</span></p>
+                        <p>Ends on: <span class="strong">18 December 2017</span></p>
+                    </div>
+                </div>
+-->
 
-
-            <!--<h2 class="heading-medium">This can be shown as proof today</h2>-->
             <table>
                 <tbody>
 
@@ -157,9 +189,15 @@ Prepay for NHS prescriptions
                         <td><span class="strong">Name</span></td>
                         <td>Jane Doe</td>
                     </tr>
+                    <!--
                     <tr>
                         <td><span class="strong">Date of birth</span></td>
                         <td>04 September 1980</td>
+                    </tr>
+-->
+                    <tr>
+                        <td><span class="strong">Prepayment number</span></td>
+                        <td>869 467 587</td>
                     </tr>
                     <tr>
                         <td><span class="strong">Exempt from paying</span></td>
@@ -176,43 +214,42 @@ Prepay for NHS prescriptions
                             </span></td>
                     </tr>
                     <tr>
-                        <td><span class="strong">End date</span></td>
-                        <td>06 November 2019</td>
+                        <td><span class="strong">Start date</span></td>
+                        <td>22 July 2018</td>
                     </tr>
                     <tr>
-                        <td><span class="strong">Today's date</span></td>
-                        <td>10 July 2019</td>
-                        <!--
-                   <i class="icon icon-important">
-                <span class="visually-hidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-                This result can only be used as proof today.
-            </strong>
--->
+                        <td><span class="strong">End date</span></td>
+                        <td>23 July 2019</td>
                     </tr>
                 </tbody>
             </table>
+            
+                <h2 class="heading-large">Collecting prescriptions</h2>
+                <p>Tick box 'F' on the back of your prescription.</p>
 
-            <h2 class="heading-medium">How to get your help</h2>
-            <p>Don't worry if you've lost your exemption certificate, you can show this page as proof today.</p>
-            <h3 class="heading-small">Collecting prescriptions</h3>
+                <p>Pharmacy staff ask for prepayment details. If you do not have them with you, they tick 'Evidence not seen' on the prescription. They will not charge you.</p>
 
-            <p>Pharmacy staff ask for exemption details. If you do not have them with you, they tick 'Evidence not seen' on the prescription. They will not charge you.</p>
-<br>
-            <ul class="options-list">
-                <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
-                <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55k)</a></li>
+                <p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
+                <br>
+                <ul class="options-list">
+                    <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+                    <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55k)</a></li>
+<!--                    <li style="padding-top:1em"><a class="icon mobile-icon" href="to-handler">Send my certificate</a></li>-->
+                </ul>
 <!--
-                <li>
-                    <div class="app-c-subscribe">
-                        <a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" class="app-c-subscribe__link govuk-link" href="/bank-holidays/england-and-wales.ics">Add your NHS exemption end date to your calendar <nobr>(ICS, 14KB)</nobr></a>
-                    </div>
-                </li>
--->
-            </ul>
 
-        <h2 class="heading-medium">Could you get help to pay other NHS costs?</h2>
+                <hr>
+
+                <h2 class="heading-large">Change or add your contact details</h2>
+                <p>
+                    You need to tell us if your personal details change, so you do not get a fine. You can also change or add new contact details.
+                </p>
+                <p>You need to answer two security questions about how you prepay before you can edit your details.</p>
+                <p><a href="../change/securityquestion/howdidyoubuy">Change or add to your details</a></p>
+-->
+
+
+<h2 class="heading-medium">Could you get help to pay other NHS costs?</h2>
         
           <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
         </p>
@@ -230,22 +267,6 @@ Prepay for NHS prescriptions
         </div>
     </div>
 </main>
-
-<!--
-   <div class="column-one-third">
-      <div class="nextoblue">
-      <h2 class="heading-medium">Save details</h2>
-
-      <ul class="list options-list">
-        <li><a class="icon print-icon" href="javascript:window.print();">Print this page</a></li>
-        <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this page (PDF 55k)</a></li>
-        <li>            <div class="app-c-subscribe">
-                <a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" class="app-c-subscribe__link govuk-link" href="/bank-holidays/england-and-wales.ics">Add your NHS exemption end date to your calendar <nobr>(ICS, 14KB)</nobr></a>
-            </div></li>
-      </ul>
-    </div>
-        </div>
--->
 
 
 {% endblock %}
