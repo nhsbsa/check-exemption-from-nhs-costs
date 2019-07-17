@@ -1,244 +1,205 @@
 {% extends "layout_bsa.html" %}
-
 {% block page_title %}
 Prepay for NHS prescriptions
 {% endblock %}
-
 {% block content %}
-
 <style>
-
-    .info-table {
-        span {
-            float: right;
-            width: 60%;
-        }
-    }
-
-    .done-panel h1 {
-        padding-top: 10px;
-        margin: 0;
-    }
-
-    .done-panel h2 {
-        line-height: 145%;
-
-        padding-top: 0;
-        /*        margin: 10px 0 5px 0;*/
-    }
-
-    .callout--attention {
-        border: 8px solid #0072ce;
-    }
-
-    .callout {
-        padding: 1em;
-        margin-top: 1.5em;
-    }
-
-    .app-c-subscribe {
-        font-family: "nta", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        margin-bottom: 20px;
-        padding-top: 15px
-    }
-
-    @media print {
-        .app-c-subscribe {
-            font-family: sans-serif
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe {
-            font-size: 19px;
-            line-height: 1.3157894737
-        }
-    }
-
-    @media print {
-        .app-c-subscribe {
-            font-size: 14pt;
-            line-height: 1.15
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe {
-            margin-bottom: 30px
-        }
-    }
-
-    .app-c-subscribe__link {
-        line-height: 1.25;
-        display: block;
-        background: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;
-        min-height: 2.5em;
-        padding: 0 0 0 2.2em
-    }
-
-    @media print {
-        .app-c-subscribe__link {
-            font-family: sans-serif
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe__link {
-            font-size: 19px;
-            line-height: 1.3157894737
-        }
-    }
-
-    @media print {
-        .app-c-subscribe__link {
-            font-size: 14pt;
-            line-height: 1.15
-        }
-    }
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 20 / 10),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-        .app-c-subscribe__link {
-            background-image: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);
-            background-size: 29px 24px
-        }
-    }
+   .info-table {
+   span {
+   float: right;
+   width: 60%;
+   }
+   }
+   .done-panel h1 {
+   padding-top: 10px;
+   margin: 0;
+   }
+   .done-panel h2 {
+   line-height: 145%;
+   padding-top: 0;
+   /*        margin: 10px 0 5px 0;*/
+   }
+   .callout--attention {
+   border: 8px solid #0072ce;
+   }
+   .callout {
+   padding: 1em;
+   margin-top: 1.5em;
+   }
+   .app-c-subscribe {
+   font-family: "nta", Arial, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.25;
+   margin-bottom: 20px;
+   padding-top: 15px
+   }
+   @media print {
+   .app-c-subscribe {
+   font-family: sans-serif
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe {
+   font-size: 19px;
+   line-height: 1.3157894737
+   }
+   }
+   @media print {
+   .app-c-subscribe {
+   font-size: 14pt;
+   line-height: 1.15
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe {
+   margin-bottom: 30px
+   }
+   }
+   .app-c-subscribe__link {
+   line-height: 1.25;
+   display: block;
+   background: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;
+   min-height: 2.5em;
+   padding: 0 0 0 2.2em
+   }
+   @media print {
+   .app-c-subscribe__link {
+   font-family: sans-serif
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe__link {
+   font-size: 19px;
+   line-height: 1.3157894737
+   }
+   }
+   @media print {
+   .app-c-subscribe__link {
+   font-size: 14pt;
+   line-height: 1.15
+   }
+   }
+   @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 20 / 10),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+   .app-c-subscribe__link {
+   background-image: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);
+   background-size: 29px 24px
+   }
+   }
 </style>
-
 <main id="content" role="main">
-    <div class="grid-row">
-        <div class="column-full">
-            <div class="phase-banner">
-                <p>
-                    <strong class="phase-tag">BETA</strong>
-                    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-row">
-        <div class="column-two-thirds">
-
-            <div class="done-panel">
-                <h1 class="heading-xlarge">You currently have an NHS exemption</h1>
-                <h2 class="heading-medium">Expires on 6 November 2019</h2>
-            </div>
-
-
-
-            <!--<h2 class="heading-medium">This can be shown as proof today</h2>-->
-            <table>
-                <tbody>
-
-                    <tr>
-                        <td><span class="strong">Name</span></td>
-                        <td>Jane Doe</td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">Date of birth</span></td>
-                        <td>4 September 1980</td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">Exempt from paying</td>
-                        <td><span class="form-hint-list-item form-hint-list-item--valid">
-                                <span class="form-hint-list-item__indicator"></span>
-                                NHS prescriptions
-                            </span><span class="form-hint-list-item form-hint-list-item--valid">
-                                <span class="form-hint-list-item__indicator"></span>
-                                NHS dental check-ups and treatment
-                            </span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">End date</span></td>
-                        <td>6 November 2019</td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">Today's date</span></td>
-                        <td>10 July 2019</td>
-                        <!--
-                   <i class="icon icon-important">
-                <span class="visually-hidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-                This result can only be used as proof today.
-            </strong>
--->
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2 class="heading-medium">How to get your help</h2>
-            <p>Don't worry if you've lost your exemption certificate, you can show this page as proof today.</p>
-            <h3 class="heading-small">Collecting prescriptions</h3>
-
-            <p>Pharmacy staff will ask for your exemption details. If you do not have them with you, your pharmacist should tick 'Evidence not seen' on the prescription. They will not charge you.</p>
-
-            <!--                <p>We prevent fraud by matching prepayment details on our database with prescriptions and dental prescriptions.</p>-->
-
-            <h3 class="heading-small">Dental check-ups and treatment</h3>
-            <p>At your dental practice you’ll be given a form to fill out. Put a cross in [X box].</p>
-            <p>If you have a valid HC2 certificate or tax credit exemption certificate, write your certificate number on your form.</p>
-            <p>You may need to show proof of your entitlement.</p>
-            <!--            <p>This result can only be used as proof today, you'll need to check this service each time you want to use it as proof.</p>      -->
-            <!--
+   <div class="grid-row">
+      <div class="column-full">
+         <div class="phase-banner">
             <p>
-        <span class="bold">We do not send out plastic cards any more.</span> They are not required for collecting prescriptions. They are costly to the NHS and the environment.
-      </p>
--->
-            <br>
-            <ul class="options-list">
-                <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
-                <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55KB)</a></li>
-                <!--
-                  <li>            <div class="app-c-subscribe">
-                <a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" class="app-c-subscribe__link govuk-link" href="/bank-holidays/england-and-wales.ics">Add your NHS exemption end date to your calendar <nobr>(ICS, 14KB)</nobr></a>
-            </div></li>
--->
-            </ul>
-
-            <!--
-        <h2 class="heading-medium">Help to pay other NHS costs</h2>
-        
-          <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
-        </p>
--->
-
-
-
-            <hr>
-
-
-            <h3 class="heading-small">Help us improve this service</h3>
-            <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
-
-            <br>
-            <p class="button-group">
-                <a class="button" href="/">
-                    Finished
-                </a>
+               <strong class="phase-tag">BETA</strong>
+               <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
             </p>
-<a href="return_date" class="link-back">Check again</a>
-        </div>
-                       
-
-    </div>
+         </div>
+      </div>
+   </div>
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="done-panel">
+            <h1 class="heading-xlarge">You currently have an NHS exemption</h1>
+            <h2 class="heading-medium">Expires on 6 November 2019</h2>
+         </div>
+         <!--<h2 class="heading-medium">This can be shown as proof today</h2>-->
+         <table>
+            <tbody>
+               <tr>
+                  <td><span class="strong">Name</span></td>
+                  <td>Jane Doe</td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Date of birth</span></td>
+                  <td>4 September 1980</td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Exempt from paying</td>
+                  <td><span class="form-hint-list-item form-hint-list-item--valid">
+                     <span class="form-hint-list-item__indicator"></span>
+                     NHS prescriptions
+                     </span><span class="form-hint-list-item form-hint-list-item--valid">
+                     <span class="form-hint-list-item__indicator"></span>
+                     NHS dental check-ups and treatment
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td><span class="strong">End date</span></td>
+                  <td>6 November 2019</td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Today's date</span></td>
+                  <td>10 July 2019</td>
+                  <!--
+                     <i class="icon icon-important">
+                     <span class="visually-hidden">Warning</span>
+                     </i>
+                     <strong class="bold-small">
+                     This result can only be used as proof today.
+                     </strong>
+                     -->
+               </tr>
+            </tbody>
+         </table>
+         <h2 class="heading-medium">How to get your help</h2>
+         <p>Don't worry if you've lost your exemption certificate, you can show this page as proof today.</p>
+         <h3 class="heading-small">Collecting prescriptions</h3>
+         <p>Pharmacy staff will ask for your exemption details. If you do not have them with you, your pharmacist should tick 'Evidence not seen' on the prescription. They will not charge you.</p>
+         <!--                <p>We prevent fraud by matching prepayment details on our database with prescriptions and dental prescriptions.</p>-->
+         <h3 class="heading-small">Dental check-ups and treatment</h3>
+         <p>At your dental practice you’ll be given a form to fill out. Put a cross in [X box].</p>
+         <p>If you have a valid HC2 certificate or tax credit exemption certificate, write your certificate number on your form.</p>
+         <p>You may need to show proof of your entitlement.</p>
+         <!--            <p>This result can only be used as proof today, you'll need to check this service each time you want to use it as proof.</p>      -->
+         <!--
+            <p>
+            <span class="bold">We do not send out plastic cards any more.</span> They are not required for collecting prescriptions. They are costly to the NHS and the environment.
+            </p>
+            -->
+         <br>
+         <ul class="options-list">
+            <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+            <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55KB)</a></li>
+            <!--
+               <li>            <div class="app-c-subscribe">
+               <a title="Download these dates so you can add them to a calendar application such as iCal or Outlook" class="app-c-subscribe__link govuk-link" href="/bank-holidays/england-and-wales.ics">Add your NHS exemption end date to your calendar <nobr>(ICS, 14KB)</nobr></a>
+               </div></li>
+               -->
+         </ul>
+         <!--
+            <h2 class="heading-medium">Help to pay other NHS costs</h2>
+            
+              <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
+            </p>
+            -->
+         <hr>
+         <h3 class="heading-small">Help us improve this service</h3>
+         <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
+         <br>
+         <p class="button-group">
+            <a class="button" href="/">
+            Finished
+            </a>
+         </p>
+         <a href="return_date" class="link-back">Check again</a>
+      </div>
+   </div>
 </main>
-
 <!--
    <div class="column-one-third">
       <div class="nextoblue">
       <h2 class="heading-medium">Save details</h2>
-
+   
       <ul class="list options-list">
         <li><a class="icon print-icon" href="javascript:window.print();">Print this page</a></li>
         <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this page (PDF 55k)</a></li>
@@ -248,7 +209,5 @@ Prepay for NHS prescriptions
       </ul>
     </div>
         </div>
--->
-
-
+   -->
 {% endblock %}

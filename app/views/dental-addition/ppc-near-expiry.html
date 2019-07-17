@@ -1,267 +1,238 @@
 {% extends "layout_bsa.html" %}
-
 {% block page_title %}
 Prepay for NHS prescriptions
 {% endblock %}
-
 {% block content %}
-
 <style>
-    .example {
-        position: relative;
-        overflow: hidden;
-        background-color: #F8F8F8;
-        margin-right: 2%;
-        border: 10px solid #dee0e2;
-        margin-bottom: 0.78947em;
-        margin-top: 15px;
-        padding-top: 30px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-        padding-left: 15px;
-    }
-
-    .info-table {
-        span {
-            float: right;
-            width: 60%;
-        }
-    }
-
-    .done-panel h1 {
-        padding-top: 10px;
-        margin: 0;
-    }
-
-    .done-panel h2 {
-        line-height: 145%;
-        padding-top: 0;
-        margin-top: 0.8em;
-    }
-
-    .callout--attention {
-        border: 8px solid #0072ce;
-    }
-
-    .callout {
-        padding: 1em;
-        margin-top: 1.5em;
-    }
-
-    .app-c-subscribe {
-        font-family: "nta", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        margin-bottom: 20px;
-        padding-top: 15px
-    }
-
-    @media print {
-        .app-c-subscribe {
-            font-family: sans-serif
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe {
-            font-size: 19px;
-            line-height: 1.3157894737
-        }
-    }
-
-    @media print {
-        .app-c-subscribe {
-            font-size: 14pt;
-            line-height: 1.15
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe {
-            margin-bottom: 30px
-        }
-    }
-
-    .app-c-subscribe__link {
-        line-height: 1.25;
-        display: block;
-        background: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;
-        min-height: 2.5em;
-        padding: 0 0 0 2.2em
-    }
-
-    @media print {
-        .app-c-subscribe__link {
-            font-family: sans-serif
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe__link {
-            font-size: 19px;
-            line-height: 1.3157894737
-        }
-    }
-
-    @media print {
-        .app-c-subscribe__link {
-            font-size: 14pt;
-            line-height: 1.15
-        }
-    }
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 20 / 10),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-        .app-c-subscribe__link {
-            background-image: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);
-            background-size: 29px 24px
-        }
-    }
-
-    .blue-box {
-
-        position: relative;
-        overflow: hidden;
-        margin-right: 2%;
-        border: 8px solid #005EB8;
-        margin-bottom: 0.78947em;
-        margin-top: 15px;
-        padding-top: 30px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-        padding-left: 15px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        font-weight: bold;
-        padding: 20px 7px 20px 7px;
-    }
-
-    .mobile-icon {
-        background-image: url("/public/images/bsa/mobile.svg");
-        padding-left: 37px;
-        margin-left: 3px;
-    }
+   .example {
+   position: relative;
+   overflow: hidden;
+   background-color: #F8F8F8;
+   margin-right: 2%;
+   border: 10px solid #dee0e2;
+   margin-bottom: 0.78947em;
+   margin-top: 15px;
+   padding-top: 30px;
+   padding-right: 15px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   }
+   .info-table {
+   span {
+   float: right;
+   width: 60%;
+   }
+   }
+   .done-panel h1 {
+   padding-top: 10px;
+   margin: 0;
+   }
+   .done-panel h2 {
+   line-height: 145%;
+   padding-top: 0;
+   margin-top: 0.8em;
+   }
+   .callout--attention {
+   border: 8px solid #0072ce;
+   }
+   .callout {
+   padding: 1em;
+   margin-top: 1.5em;
+   }
+   .app-c-subscribe {
+   font-family: "nta", Arial, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.25;
+   margin-bottom: 20px;
+   padding-top: 15px
+   }
+   @media print {
+   .app-c-subscribe {
+   font-family: sans-serif
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe {
+   font-size: 19px;
+   line-height: 1.3157894737
+   }
+   }
+   @media print {
+   .app-c-subscribe {
+   font-size: 14pt;
+   line-height: 1.15
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe {
+   margin-bottom: 30px
+   }
+   }
+   .app-c-subscribe__link {
+   line-height: 1.25;
+   display: block;
+   background: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;
+   min-height: 2.5em;
+   padding: 0 0 0 2.2em
+   }
+   @media print {
+   .app-c-subscribe__link {
+   font-family: sans-serif
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe__link {
+   font-size: 19px;
+   line-height: 1.3157894737
+   }
+   }
+   @media print {
+   .app-c-subscribe__link {
+   font-size: 14pt;
+   line-height: 1.15
+   }
+   }
+   @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 20 / 10),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+   .app-c-subscribe__link {
+   background-image: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);
+   background-size: 29px 24px
+   }
+   }
+   .blue-box {
+   position: relative;
+   overflow: hidden;
+   margin-right: 2%;
+   border: 8px solid #005EB8;
+   margin-bottom: 0.78947em;
+   margin-top: 15px;
+   padding-top: 30px;
+   padding-right: 15px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   margin-top: 25px;
+   margin-bottom: 25px;
+   font-weight: bold;
+   padding: 20px 7px 20px 7px;
+   }
+   .mobile-icon {
+   background-image: url("/public/images/bsa/mobile.svg");
+   padding-left: 37px;
+   margin-left: 3px;
+   }
 </style>
-
 <main id="content" role="main">
-    <div class="grid-row">
-        <div class="column-full">
-            <div class="phase-banner">
-                <p>
-                    <strong class="phase-tag">BETA</strong>
-                    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-row">
-        <div class="column-two-thirds">
-
-            <div class="done-panel">
-                <span class="heading-large">You have an NHS Prescription <nobr>Prepayment Certificate</nobr> </span>
-                <h1 class="heading-large">869 467 589</h1>
-                <h2 class="heading-medium" style="">Valid until 23 July 2019</h2>
-            </div>
-
-            <!--
-                            <div class="example">
-                    <h2 class="bold-large">Your NHS Prescription Prepayment Certificate</h2>
-                    <br>
-                    <div class="info-table">
-                        <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
-                        <p>Prepayment for: <span class="strong">Jane Doe</span></p>
-                        <p>Prepayment number: <span class="strong">869 467 589</span></p>
-                        <p>Started on: <span class="strong">9 July 2019</span></p>
-                        <p>Ends on: <span class="strong">18 December 2017</span></p>
-                    </div>
-                </div>
--->
-
-            <table>
-                <tbody>
-
-                    <tr>
-                        <td><span class="strong">Name</span></td>
-                        <td>Jane Doe</td>
-                    </tr>
-                    <!--
-                    <tr>
-                        <td><span class="strong">Date of birth</span></td>
-                        <td>04 September 1980</td>
-                    </tr>
--->
-                    <tr>
-                        <td><span class="strong">Prepayment number</span></td>
-                        <td>869 467 587</td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">Exempt from paying</span></td>
-                        <td><span class="form-hint-list-item form-hint-list-item--valid">
-                                <span class="form-hint-list-item__indicator"></span>
-                                NHS prescriptions
-                            </span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">Not exempt from paying</span></td>
-                        <td><span class="form-hint-list-item form-hint-list-item--false">
-                                <span class="form-hint-list-item__indicator"></span>
-                                NHS dental check ups and treatment
-                            </span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">Start date</span></td>
-                        <td>22 July 2018</td>
-                    </tr>
-                    <tr>
-                        <td><span class="strong">End date</span></td>
-                        <td>23 July 2019</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div id="runout" class="blue-box">
-                <span class="visually-hidden">Warning</span>
-                <strong class="bold-small">
-                    Your NHS Prescription Prepayment Certificate is about to run out. <a href="../ppc/duration">Buy it again</a>.
-                </strong>
-            </div>
-
-            <h2 class="heading-large">Collecting prescriptions</h2>
-            <p>Tick box 'F' on the back of your prescription.</p>
-
-            <p>Pharmacy staff will ask for your prepayment details. If you do not have them with you, your pharmacist will tick 'Evidence not seen' on your prescription. They will not charge you.</p>
-
-            <p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
-            <br>
-            <ul class="options-list">
-                <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
-                <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55KB)</a></li>
-            </ul>
-            <h2 class="heading-medium">Could you get help to pay other NHS costs?</h2>
-
-            <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
+   <div class="grid-row">
+      <div class="column-full">
+         <div class="phase-banner">
+            <p>
+               <strong class="phase-tag">BETA</strong>
+               <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
             </p>
-
-            <hr>
-            <h3 class="heading-small">Help us improve this service</h3>
-            <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
+         </div>
+      </div>
+   </div>
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="done-panel">
+            <span class="heading-large">
+               You have an NHS Prescription 
+               <nobr>Prepayment Certificate</nobr>
+            </span>
+            <h1 class="heading-large">869 467 589</h1>
+            <h2 class="heading-medium" style="">Valid until 23 July 2019</h2>
+         </div>
+         <!--
+            <div class="example">
+            <h2 class="bold-large">Your NHS Prescription Prepayment Certificate</h2>
             <br>
-            <p class="button-group">
-                <a class="button" href="/">
-                    Finished
-                </a>
-            </p>
-            <a href="return_date" class="link-back">Check again</a>
-        </div>
-    </div>
+            <div class="info-table">
+            <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
+            <p>Prepayment for: <span class="strong">Jane Doe</span></p>
+            <p>Prepayment number: <span class="strong">869 467 589</span></p>
+            <p>Started on: <span class="strong">9 July 2019</span></p>
+            <p>Ends on: <span class="strong">18 December 2017</span></p>
+            </div>
+            </div>
+            -->
+         <table>
+            <tbody>
+               <tr>
+                  <td><span class="strong">Name</span></td>
+                  <td>Jane Doe</td>
+               </tr>
+               <!--
+                  <tr>
+                      <td><span class="strong">Date of birth</span></td>
+                      <td>04 September 1980</td>
+                  </tr>
+                  -->
+               <tr>
+                  <td><span class="strong">Prepayment number</span></td>
+                  <td>869 467 587</td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Exempt from paying</span></td>
+                  <td><span class="form-hint-list-item form-hint-list-item--valid">
+                     <span class="form-hint-list-item__indicator"></span>
+                     NHS prescriptions
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Not exempt from paying</span></td>
+                  <td><span class="form-hint-list-item form-hint-list-item--false">
+                     <span class="form-hint-list-item__indicator"></span>
+                     NHS dental check ups and treatment
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Start date</span></td>
+                  <td>22 July 2018</td>
+               </tr>
+               <tr>
+                  <td><span class="strong">End date</span></td>
+                  <td>23 July 2019</td>
+               </tr>
+            </tbody>
+         </table>
+         <div id="runout" class="blue-box">
+            <span class="visually-hidden">Warning</span>
+            <strong class="bold-small">
+            Your NHS Prescription Prepayment Certificate is about to run out. <a href="../ppc/duration">Buy it again</a>.
+            </strong>
+         </div>
+         <h2 class="heading-large">Collecting prescriptions</h2>
+         <p>Tick box 'F' on the back of your prescription.</p>
+         <p>Pharmacy staff will ask for your prepayment details. If you do not have them with you, your pharmacist will tick 'Evidence not seen' on your prescription. They will not charge you.</p>
+         <p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
+         <br>
+         <ul class="options-list">
+            <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+            <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55KB)</a></li>
+         </ul>
+         <h2 class="heading-medium">Could you get help to pay other NHS costs?</h2>
+         <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
+         </p>
+         <hr>
+         <h3 class="heading-small">Help us improve this service</h3>
+         <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
+         <br>
+         <p class="button-group">
+            <a class="button" href="/">
+            Finished
+            </a>
+         </p>
+         <a href="return_date" class="link-back">Check again</a>
+      </div>
+   </div>
 </main>
-
-
 {% endblock %}

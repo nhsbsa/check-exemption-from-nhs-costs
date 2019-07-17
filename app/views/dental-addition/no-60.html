@@ -1,192 +1,158 @@
 {% extends "layout_bsa.html" %}
-
 {% block page_title %}
 Prepay for NHS prescriptions
 {% endblock %}
-
 {% block content %}
-
 <style>
-    .example {
-        position: relative;
-        overflow: hidden;
-        background-color: #F8F8F8;
-        margin-right: 2%;
-        border: 10px solid #dee0e2;
-        margin-bottom: 0.78947em;
-        margin-top: 15px;
-        padding-top: 30px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-        padding-left: 15px;
-    }
-
-    .info-table {
-        span {
-            float: right;
-            width: 60%;
-        }
-    }
-
-    .done-panel h1 {
-        padding-top: 10px;
-        margin: 0;
-    }
-
-    .done-panel h2 {
-        line-height: 145%;
-
-        padding-top: 0;
-        /*        margin: 10px 0 5px 0;*/
-    }
-
-    .callout--attention {
-        border: 8px solid #0072ce;
-    }
-
-    .callout {
-        padding: 1em;
-        margin-top: 1.5em;
-    }
-
-    .app-c-subscribe {
-        font-family: "nta", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        margin-bottom: 20px;
-        padding-top: 15px
-    }
-
-    @media print {
-        .app-c-subscribe {
-            font-family: sans-serif
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe {
-            font-size: 19px;
-            line-height: 1.3157894737
-        }
-    }
-
-    @media print {
-        .app-c-subscribe {
-            font-size: 14pt;
-            line-height: 1.15
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe {
-            margin-bottom: 30px
-        }
-    }
-
-    .app-c-subscribe__link {
-        line-height: 1.25;
-        display: block;
-        background: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;
-        min-height: 2.5em;
-        padding: 0 0 0 2.2em
-    }
-
-    @media print {
-        .app-c-subscribe__link {
-            font-family: sans-serif
-        }
-    }
-
-    @media (min-width: 40.0625em) {
-        .app-c-subscribe__link {
-            font-size: 19px;
-            line-height: 1.3157894737
-        }
-    }
-
-    @media print {
-        .app-c-subscribe__link {
-            font-size: 14pt;
-            line-height: 1.15
-        }
-    }
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 20 / 10),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-        .app-c-subscribe__link {
-            background-image: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);
-            background-size: 29px 24px
-        }
-    }
+   .example {
+   position: relative;
+   overflow: hidden;
+   background-color: #F8F8F8;
+   margin-right: 2%;
+   border: 10px solid #dee0e2;
+   margin-bottom: 0.78947em;
+   margin-top: 15px;
+   padding-top: 30px;
+   padding-right: 15px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   }
+   .info-table {
+   span {
+   float: right;
+   width: 60%;
+   }
+   }
+   .done-panel h1 {
+   padding-top: 10px;
+   margin: 0;
+   }
+   .done-panel h2 {
+   line-height: 145%;
+   padding-top: 0;
+   /*        margin: 10px 0 5px 0;*/
+   }
+   .callout--attention {
+   border: 8px solid #0072ce;
+   }
+   .callout {
+   padding: 1em;
+   margin-top: 1.5em;
+   }
+   .app-c-subscribe {
+   font-family: "nta", Arial, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.25;
+   margin-bottom: 20px;
+   padding-top: 15px
+   }
+   @media print {
+   .app-c-subscribe {
+   font-family: sans-serif
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe {
+   font-size: 19px;
+   line-height: 1.3157894737
+   }
+   }
+   @media print {
+   .app-c-subscribe {
+   font-size: 14pt;
+   line-height: 1.15
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe {
+   margin-bottom: 30px
+   }
+   }
+   .app-c-subscribe__link {
+   line-height: 1.25;
+   display: block;
+   background: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-3229a501be529bba31de554d9bdfd186b658036f5d831d2a74ce26b8d169715e.png) no-repeat scroll 0 0;
+   min-height: 2.5em;
+   padding: 0 0 0 2.2em
+   }
+   @media print {
+   .app-c-subscribe__link {
+   font-family: sans-serif
+   }
+   }
+   @media (min-width: 40.0625em) {
+   .app-c-subscribe__link {
+   font-size: 19px;
+   line-height: 1.3157894737
+   }
+   }
+   @media print {
+   .app-c-subscribe__link {
+   font-size: 14pt;
+   line-height: 1.15
+   }
+   }
+   @media only screen and (-webkit-min-device-pixel-ratio: 2),
+   only screen and (min--moz-device-pixel-ratio: 2),
+   only screen and (-o-min-device-pixel-ratio: 20 / 10),
+   only screen and (min-device-pixel-ratio: 2),
+   only screen and (min-resolution: 192dpi),
+   only screen and (min-resolution: 2dppx) {
+   .app-c-subscribe__link {
+   background-image: url(https://assets.publishing.service.gov.uk/calendars/icon-calendar-2x-ce3cab0b3d26d007e90deb7b7843fd893a68d5a9d61279d91cc517b81ec99fd6.png);
+   background-size: 29px 24px
+   }
+   }
 </style>
-
 <main id="content" role="main">
-
-    <div class="grid-row">
-        <div class="column-two-thirds">
-
-            <div class="done-panel">
-                <h1 class="heading-xlarge">You get help with health costs</h1>
-            </div>
-
-
-            <p class="lede">
-                Because you're 60 or over:
-            </p>
-
-            <h2 class="heading-medium" style="margin-top: 0">You get free:</h2>
-
-            <ul class="form-hint-list">
-                <li class="form-hint-list-item form-hint-list-item--valid">
-                    <span class="form-hint-list-item__indicator"></span>
-                    NHS prescriptions
-                </li>
-                <li class="form-hint-list-item form-hint-list-item--valid">
-                    <span class="form-hint-list-item__indicator"></span>
-                    sight tests
-                </li>
-            </ul>
-            <h2 class="heading-medium">You do not automatically get free:</h2>
-
-            <ul class="form-hint-list">
-                <li class="form-hint-list-item form-hint-list-item--false">
-                    <span class="form-hint-list-item__indicator"></span>
-                    NHS dental check-ups and treatment
-                </li>
-            </ul>
-            <hr>
-            <h3 class="heading-medium">How to get your help</h3>
-            <p>In most circumstances you won't have to do anything as your date of birth will be on your medical records and will show your age.</p>
-            <h3 class="heading-small">To get your free prescriptions</h3>
-            <p>Tick box C (the third box down) on the back of the prescription form.</p>
-
-  
-        <h2 class="heading-medium">Could you get help to pay other NHS costs?</h2>
-        
-          <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
-        </p>
-
-<hr>
-                        <h3 class="heading-small">Help us improve this service</h3>
-            <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
-<br>
-            <p class="button-group">
-                <a class="button" href="/">
-                    Finished
-                </a>
-            </p>
-                       <a href="return_date" class="link-back">Check again</a>
-        </div>
-    </div>
-
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="done-panel">
+            <h1 class="heading-xlarge">You get help with health costs</h1>
+         </div>
+         <p class="lede">
+            Because you're 60 or over:
+         </p>
+         <h2 class="heading-medium" style="margin-top: 0">You get free:</h2>
+         <ul class="form-hint-list">
+            <li class="form-hint-list-item form-hint-list-item--valid">
+               <span class="form-hint-list-item__indicator"></span>
+               NHS prescriptions
+            </li>
+            <li class="form-hint-list-item form-hint-list-item--valid">
+               <span class="form-hint-list-item__indicator"></span>
+               sight tests
+            </li>
+         </ul>
+         <h2 class="heading-medium">You do not automatically get free:</h2>
+         <ul class="form-hint-list">
+            <li class="form-hint-list-item form-hint-list-item--false">
+               <span class="form-hint-list-item__indicator"></span>
+               NHS dental check-ups and treatment
+            </li>
+         </ul>
+         <hr>
+         <h3 class="heading-medium">How to get your help</h3>
+         <p>In most circumstances you won't have to do anything as your date of birth will be on your medical records and will show your age.</p>
+         <h3 class="heading-small">To get your free prescriptions</h3>
+         <p>Tick box C (the third box down) on the back of the prescription form.</p>
+         <h2 class="heading-medium">Could you get help to pay other NHS costs?</h2>
+         <p>Answer a few more questions about your circumstances to check if you could get <a href="">help to pay other NHS costs</a>.
+         </p>
+         <hr>
+         <h3 class="heading-small">Help us improve this service</h3>
+         <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
+         <br>
+         <p class="button-group">
+            <a class="button" href="/">
+            Finished
+            </a>
+         </p>
+         <a href="return_date" class="link-back">Check again</a>
+      </div>
+   </div>
 </main>
-
-
 {% endblock %}
