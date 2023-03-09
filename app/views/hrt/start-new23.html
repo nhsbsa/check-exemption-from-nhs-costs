@@ -1,0 +1,95 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+View an NHS prescription<br>prepayment
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+   <div class="grid-row">
+      <div class="column-full">
+         <div class="phase-banner">
+            <p>
+               <strong class="phase-tag">BETA</strong>
+               <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="text">
+            <div class="heading-group">
+               <p>Based on what you've told us</p>
+               <h1 class="heading-xlarge">You could get help to pay for your NHS costs</h1>
+            </div>
+         </div>
+         
+         <h2 class="heading-large">Apply for further help</h2>
+         <p>You can apply for help to pay for your NHS costs.</p>
+         <p>Your household income will be taken into account as well as your council tax and housing costs.</p>
+
+         <p>You don't have to be claiming benefits to apply.</p>
+         <p>Any help you get also covers your partner and children under 19.</p>
+         <p>You may also get help paying for:</p>
+         <ul class="list-bullet">
+            <li>NHS prescriptions</li>
+            <li>NHS dental treatment</li>
+            <li>sight tests</li>
+            <li>new glasses or contact lenses</li>
+            <li>repairing or replacing your glasses or contact lenses</li>
+            <li>NHS wigs and fabric supports</li>
+            <li>travel for NHS treatment</li>
+         </ul>
+
+         <br>
+
+         <p>If your exemption or prescription prepayment certificate (PPC) is valid, you can use this service as proof.</p>
+
+         <p>You cannot use this service to:</p>
+         <ul class="list-bullet">
+            <li><a href="https://www.nhsbsa.nhs.uk/exemption-certificates">renew your NHS exemption</a></li>
+            <li><a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/prescription-prepayment-certificates-ppcs">renew your prescription prepayment certificate (PPC)</a></li> 
+            <li>update your address or personal details - <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs">contact us</a> to do this</li>
+         </ul>
+
+         <h3 class="heading-medium">Exemptions you can check</h3>
+         <ul class="list-bullet">
+            <li>Prescription prepayment certificate (PPC)</li>
+            <li>Medical exemption certificate</li>
+            <li>Maternity exemption certificate</li>
+            <li>HC2 certificate (full help through the Low Income Scheme)</li>
+            <li>Tax Credit exemption certificate </li>
+         </ul>
+
+         <h3 class="heading-medium">Exemptions you cannot currently check</h3>
+         <ul class="list-bullet">
+            <li>Prescription exemption certificate issued by the Ministry of Defence</li>
+            <li>HC3 certificate (partial help through the Low Income Scheme)</li>
+         </ul>
+
+         <!--
+            <p class="panel panel-border-wide"><b>You cannot use this service to check which benefit you're on.</b>
+                <br>
+                Only some <a href="/">benefits entitle you to free prescriptions</a>
+            </p>
+            -->  
+            <br>         
+         <h2 class="heading-large">When you do not need to check</h2>
+         <p>You're automatically entitled to free NHS prescriptions and NHS dental treatment if you are:</p>
+         <ul class="list-bullet">
+            <li>under 16</li>
+            <li>16, 17 or 18 and in full-time education</li>
+            <li>getting <a href="https://www.nhsbsa.nhs.uk/check-if-youre-eligible-help/getting-benefits">certain benefits</a> 
+               or you're named on the claim as a partner or child.
+            </li>
+         </ul>
+         <br>
+         <br>
+         <p class="button-group">
+            <a class="button button-get-started" href="dob" id="next">
+            Start now
+            </a>
+         </p>
+      </div>
+   </div>
+</main>
+{% endblock %}
