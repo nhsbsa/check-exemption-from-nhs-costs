@@ -1,0 +1,256 @@
+{% extends "layout_bsa.html" %}
+{% block page_title %}
+Prepay for NHS prescriptions
+{% endblock %}
+{% block content %}
+<style>
+   .example-icon-list p {
+   display: inline-block;
+   font-size: 16px;
+   padding-left: 1em;
+   vertical-align: middle;
+   margin-bottom: 0;
+   }
+   .list--check, {
+   list-style: none;
+   padding-left: 32px;
+   }
+   .list--check li::before {
+   background-image:
+   }
+   .standard {
+   vertical-align: middle;
+   padding: 0;
+   counter-reset: standard-counter;
+   }
+   .standard>li::before {
+   width: 10%;
+   }
+   .standard>li {
+   list-style: none;
+   display: block;
+   border-top: 1px solid #bfc1c3;
+   padding: 1em 0 0.5em 0;
+   margin: 0;
+   page-break-inside: avoid;
+   }
+   .updated-standard li .point {
+   width: 67%;
+   }
+   .standard>li .point {
+   padding-left: 3em
+   }
+   .standard>li .point {
+   font-size: 18px;
+   line-height: 1.2;
+   }
+   /*  .circle-step {
+   font-size: 19px;
+   min-width: 38px;
+   min-height: 38px;
+   line-height: 38px;
+   }*/
+   .circle {
+   display: inline-block;
+   border-radius: 50%;
+   background: #0b0c0c;
+   color: #fff;
+   font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+   font-weight: bold;
+   text-align: center;
+   position: absolute;
+   margin: -0.1em 0em 0em 1em
+   }
+   .panel_side {
+   display: block;
+   padding-top: 15px;
+   background-color: #DEE0E2;
+   }
+   .panel_side_inner {
+   width: auto;
+   margin-left: 15px;
+   margin-right: 15px;
+   padding-bottom: 5px;
+   }
+   .display_field {
+   margin-bottom: 20px;
+   display: block;
+   }
+   .display_field_value h3 {
+   font-family: "nta", Arial, sans-serif;
+   font-size: 19px;
+   line-height: 1.31579;
+   text-transform: none;
+   font-weight: 700;
+   margin-bottom: 5px;
+   }
+   .income-img {
+   width: 283px;
+   }
+   @media(max-width:640px) {
+   .income-img {
+   width: 100%
+   }
+   }
+</style>
+<main id="content" role="main">
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="text">
+            <h1 class="heading-xlarge"><span class="heading-secondary">Check if you have an NHS exemption</span>We cannot match you to our records</h1>
+            <h2 class="heading-medium">The details you gave:</h2>
+            <table id="review-table-one">
+               <tr>
+                  <td>Full name</td>
+                  <td class="bold">{{firstname}}Robert Green</td>
+                  <td>
+                     <a href="">Change</a>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Date of birth</td>
+                  <td class="bold">{{dobday}} {{dobmonth}} {{dobyear}} 2 April 1984</td>
+                  <td>
+                     <a href="">Change</a>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Postcode</td>
+                  <td class="bold">AB12 3CD</td>
+                  <td>
+                     <a href="">Change</a>
+                  </td>
+               </tr>
+            </table>
+            <h2 class="heading-large">We cannot find you for one of these reasons</h2>
+            <ol class="standard">
+               <li style="border-top: none;">
+                  <div>
+                     <details>
+                        <summary>
+                           <span class="summary">The details you gave do not match our records</span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                           <p>If you have recently moved or changed your name, we may still have your old information. 
+                              Try again using your old details to check if you are exempt from paying NHS costs.</p>
+                           <p>You must then <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="blank">contact us</a> to let us know about any changes to your details, and make sure 
+                              your information is up to date at your GP surgery and dental practice.</p>
+                           <p>If you’ve never had an exemption from paying NHS costs, we will not have your details.</p>
+                        </div>
+                     </details>
+                  </div>
+               </li>
+               <!--
+                  <li>
+                    <div>
+                      <details>
+                        <summary>
+                          <span class="summary">We weren't able to check if you're named on a benefit claim</span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                        <p>Only certain benefits entitle you to free prescriptions.<br>Don't assume that the benefit you get automatically gives you help.</p>
+                        <p>If your partner or parent receives free prescriptions because of the benefit they're on, you may be entitled to the same help. </p>
+                  
+                      <p>Check to see if your benefit entitles you to <a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/free-nhs-prescriptions">free prescriptions.</a></p>
+                        </div>
+                      </details>
+                    </div>
+                  </li>
+                  -->
+               <li>
+                  <div>
+                     <details>
+                        <summary>
+                           <span class="summary">You've only recently become entitled to help with NHS costs
+                              <!-- to help with NHS costs-->
+                              <!-- to NHS exemptions -->
+                                 
+                              </span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                           <p>We may not have all your details yet. Our records can take up to 6 weeks to update.
+                              <br><br>
+                              <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs">Contact us</a>
+                              if you want to check if you need to pay for your NHS prescriptions or dental check-ups and treatment.
+                           </p>
+                           <!--                Check to see if you're entitled to <a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/free-nhs-prescriptions">free prescriptions.</a></p>-->
+                        </div>
+                     </details>
+                  </div>
+               </li>
+               <li>
+                  <div>
+                     <details>
+                        <summary>
+                           <span class="summary">You're no longer entitled to help with NHS costs</span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                           <p>Your exemption certificate may have expired.</p>
+                           <p>View <a href="https://www.nhsbsa.nhs.uk/exemption-certificates" target="blank">how you can apply for a new certificate.</a></p>
+                           
+                        </div>
+                     </details>
+                  </div>
+               </li>
+
+               <li>
+                  <div>
+                     <details>
+                        <summary>
+                           <span class="summary">Your prescription prepayment certificate (PPC) has expired</span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                           <p>You can <a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/prescription-prepayment-certificates-ppcs" target="blank">buy another PPC online.</a>
+                           <br><br>
+                           A PPC lets you get as many NHS prescriptions as you need for a set price. If you regularly pay 
+                           prescription charges, a PPC could save you money.
+                           </p>
+                           
+                        </div>
+                     </details>
+                  </div>
+               </li>
+
+               <li>
+                  <div>
+                     <details>
+                        <summary>
+                           <span class="summary">You have a hormone replacement therapy prescription prepayment certificate (HRT PPC)</span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                           <p>
+                           Our exemption checker service currently cannot check for an HRT PPC exemption. We hope this will change in the future.
+                           </p>
+                           
+                        </div>
+                     </details>
+                  </div>
+               </li>
+            </ol>
+            <!-- <BR>
+               <p class=" panel panel-border-wide ">However, if you are in full time education you are entitled to free prescriptions until you are 19.</p> -->
+            <h2 class="heading-medium">Check if you should be entitled</h2>
+            <p>Answer a few more questions to check if you could get help to pay for prescriptions and other NHS costs.</p>
+            <br>
+            <p class="button-group">
+               <a class="button button-start" href="" id="next">
+               Check now
+               </a>
+            </p>
+            <hr>
+            <h3 class="heading-small">Help us improve this service</h3>
+            <p><a target="_blank" rel="noopener" id="finished-survey" href="#">Tell us what you think of this service</a> (Takes 30 seconds)</p>
+            <br>
+            <!--
+               <p class="button-group">
+                   <a class="button" href="/">
+                       Finished
+                   </a>
+               </p>
+               -->
+            <a href="return_date" class="link-back">Check again</a>
+         </div>
+      </div>
+   </div>
+</main>
+{% endblock %}
